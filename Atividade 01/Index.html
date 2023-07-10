@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatisticas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Calculo de Estatisticas</h1>
+    </header>
+    <section>
+        <div class="calculos">
+            <div class="media">
+                <div class="cabecalho">
+                    <h3 class="center">Média</h3>
+                </div>
+                <div class="content-calculo">
+                    <label for="media">Informe a seguir as notas do aluno:</label>
+                    <input type="number" id="media" placeholder="Informe a nota">
+                    <button class="enviar-valor" id="enviar-nota">Enviar nota</button>
+                </div>
+                <button class="calculate" id="calculate-media">Calcular</button>
+                <div class="result">
+                    <label for="final">Média Final:</label>
+                    <input type="text" id="final" disabled>
+                </div>
+            </div>
+            <hr>
+            <div class="media-ponderada">
+                <div class="cabecalho">
+                    <h3 class="center">Média Ponderada</h3>
+                </div>
+                <div class="content-calculo">
+                    <label for="valor">Informe a nota: </label>
+                    <input type="number" name="nota" id="valor" placeholder="nota">
+                    <label for="peso">Peso da nota: </label>
+                    <input type="number" name="peso-nota" id="peso">
+                    <button class="enviar-valor" id="enviar-valores">Enviar valores</button>
+                </div>
+                <button class="calculate" id="calculate-ponderada">Calcular</button>
+                <div class="result">
+                    <label for="resultado-ponderada">Resultado média ponderada</label>
+                    <input type="text"  id="resultado-ponderada" disabled>
+                </div>
+            </div>
+            <hr>
+            <div class="mediana">
+                <div class="cabecalho">
+                    <h3 class="center">Mediana</h3>
+                </div>
+                <div class="content-calculo">
+                    <label for="mediana">Informe os valores para calculo da mediana: </label>
+                    <input type="number" name="numbers" id="mediana" placeholder="informe os valores">
+                    <button class="enviar-valor" id="valor-mediana">Enviar valor</button>
+                </div>
+                <button class="calculate" id="calculate-mediana">Calcular</button>
+                <div class="result">
+                    <label for="resultado-mediana">Resultado mediana</label>
+                    <input type="text" id="result-mediana" disabled>
+                </div>
+            </div>
+            <hr>
+            <div class="moda">
+                <div class="cabecalho">
+                    <h3 class="center">Moda</h3>
+                </div>
+                <div class="content-calculo">
+                    <label for="moda">Informe os valores: </label>
+                    <input type="number" name="moda" id="moda" placeholder="Informe os valores">
+                    <button class="enviar-valor" id="valor-moda">Enviar valor</button>
+                </div>
+                <button class="calculate" id="calculate-moda">Calcular</button>
+                <div class="result">
+                    <label for="moda-result">Resultado moda</label>
+                    <input type="text" id="moda-result" disabled>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>

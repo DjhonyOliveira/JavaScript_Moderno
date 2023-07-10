@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+header {
+    padding-top: 10px;
+    margin: auto 5em auto 5em ;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    margin: auto 5em auto 5em ;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-top: 15px;
+}
+
+.content-calculo {
+    display: flex;
+    justify-content: center;
+}
+
+.result {
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    margin-right: 5%;
+}
+
+.calculate {
+    display: flex;
+    margin: 15px auto 0 auto;
+}
+
+::placeholder {
+    text-align: center;
+}
