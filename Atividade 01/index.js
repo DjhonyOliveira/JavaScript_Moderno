@@ -73,6 +73,7 @@ document.getElementById('calculate-mediana').addEventListener("click",()=>{
     function ordenacao(a,b){
         return (a - b )
     }
+    
     mediana.sort(ordenacao)
     let teste = mediana.length / 2
 
@@ -83,7 +84,6 @@ document.getElementById('calculate-mediana').addEventListener("click",()=>{
         teste = Math.round(teste)
         resultMediana.value = mediana[teste - 1]
     }
-    
 })
 
 
