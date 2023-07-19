@@ -1,16 +1,15 @@
 const input = document.getElementById("input")
-const resultInput = document.getElementById("result")
 const allowedKeys = ["(", ")", "/", "*", "-", "+", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", ".", "%", " "]
 
-import { calculate, resultInput } from "./modules/calculate.js"
-import { theme, main, root } from "./modules/themes.js"
-import { clear } from "./modules/clear.js"
+import { calculate } from './modules/calculate.js'
+import { theme } from './modules/themes.js'
+import { clear } from './modules/clear.js'
 
 document.getElementById("clear").addEventListener("click", clear)
 
-document.getElementById("equal").addEventListener("click", calculate)
-
 document.getElementById("themeSwitcher").addEventListener("click", theme)
+
+document.getElementById("equal").addEventListener("click", calculate)
 
 
 document.querySelectorAll(".charKey").forEach(function (charKeyBtn) {
