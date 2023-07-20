@@ -1,0 +1,14 @@
+{
+  "name": "atividade-03",
+  "version": "1.0.0",
+  "description": "Atividade 03, bibliotecas terceiras",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Djonatan",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.9"
+  }
+}
