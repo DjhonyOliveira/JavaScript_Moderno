@@ -69,21 +69,39 @@ document.getElementById('valor-mediana').addEventListener("click", ()=>{
     valMediana.value = ''
 })
 
-document.getElementById('calculate-mediana').addEventListener("click",()=>{
-    function ordenacao(a,b){
-        return (a - b )
-    }
+document.getElementById('calculate-mediana').addEventListener("click",(...mediana)=>{
+    const orderNumbers = [...mediana].sort((a,b) => a - b)
+    const centro = Math.floor(orderNumbers.length / 2)
     
-    mediana.sort(ordenacao)
-    let teste = mediana.length / 2
-
-    if(Number.isInteger(teste)) {
-        let soma = (mediana[teste - 1] + mediana[teste]) / 2
-        resultMediana.value = soma
+    if (orderNumbers.length % 2 !== 0) {
+        resultMediana.value = orderNumbers[centro]
     } else {
-        teste = Math.round(teste)
-        resultMediana.value = mediana[teste - 1]
+        const firstMedian = orderNumbers[centro - 1]
+        const secondMedian = orderNumbers[centro]
+        resultMediana.value = average(firstMedian, secondMedian)
     }
+})
+
+// Calculo moda
+
+const resultModa = document.getElementById('moda-result')
+const numberModa = document.getElementById('moda')
+
+document.getElementById('valor-moda').addEventListener("click", () =>{
+    let valor = parseFloat(numberModa.value)
+    moda.push(valor)
+    numberModa.value = ''
+})
+
+document.getElementById('calculate-moda').addEventListener("click", (...moda) => {
+    // [ [n, qtd], [n, qtd], [n, qtd] ]
+    const quantities = moda.map(num => [
+      num,
+      numbers.filter(n => num === n).length
+    ])
+    quantities.sort((a, b) => b[1] - a[1])
+
+    resultModa.value = quantities[0][0]
 })
 
 
